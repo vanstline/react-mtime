@@ -1,0 +1,57 @@
+
+.navUl {
+  display: flex;
+  height: 52px;
+  background: #1c2635;
+  justify-content: space-around;
+}
+
+.navUl li {
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  text-align: center;
+}
+
+.navUl a {
+  position: relative;
+  display: inline-block;
+  height: 52px;
+  line-height: 52px;
+  color: #bbb;
+}
+.navUl span,
+.navUl i {
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  vertical-align: middle;
+}
+
+.navUl i {
+  background-size: cover;
+}
+
+.Logo {
+  width: 68px;
+  background: url('../../../img/logo_mtime.png') no-repeat center;
+}
+
+.user {
+  width: 17px;
+  background: url('../../../img/ico_my.png') no-repeat center;
+}
+
+.navUl .active {
+  font-weight: bold;
+  color: #fff;
+}
+.navUl .active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #fff;
+}

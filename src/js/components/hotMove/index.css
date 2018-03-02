@@ -1,0 +1,45 @@
+
+.indexmovie {
+    padding: .05rem .15rem .15rem;
+}
+.movieTitle {
+    position: relative;
+}
+.movieTitle a {
+    position: relative;
+    display: block;
+    height: .43rem;
+    line-height: .43rem;
+    font-weight: normal;
+}
+.movieTitle i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -.045rem;
+    width: .16rem;
+    height: .09rem;
+    background: url('../../../img/i-tmore.png');
+    background-size: cover;
+    transform: rotate(-90deg);
+}
+
+.indexmovie ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.moveList {
+    width: 25%;
+    padding-bottom: .1rem;
+}
+.moveList .pic {
+    margin: 0 auto;
+    width: 95%;
+}
+.moveList .pic img {
+    width: 100%;
+    height: 1.25rem;
+}
+.moveList .text {
+    text-align: center;
+}

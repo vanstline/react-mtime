@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- set `maximum-scale` for some compatibility issues -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#000000">
+    <title>Mtime</title>
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <script>
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        }
+        if(!window.Promise) {
+            document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+        }
+    </script>
+    <script>
+        (function(){
+            function resize() {
+                var htmlEle = document.documentElement;
+                var htmlWidth = window.innerWidth;
+                htmlEle.style.fontSize = htmlWidth / 3.75 + 'px';
+
+            } resize();
+
+            (function (doc, win) {
+
+                var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    var clientWidth = window.innerWidth;
+
+                    if (!clientWidth) return;
+                    console.log(clientWidth);
+                    if (clientWidth > 750) {
+                        docEl.style.fontSize = '100px';
+                    } else{
+                        docEl.style.fontSize = (clientWidth / 3.75) + 'px';
+                        console.log(docEl.style.fontSize);
+                    }
+                };
+
+                if (!doc.addEventListener) return;
+                win.addEventListener(resizeEvt, recalc, false);
+                doc.addEventListener('DOMContentLoaded', recalc, false);
+            })(document, window)
+        })()
+    </script>
+</head>
+<body>
+
+<div id="root"></div>
+
+</body>
+</html>
